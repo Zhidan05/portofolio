@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes terminalPulse{0%,100%{opacity:1;}50%{opacity:0.25;}}.status-pulse{animation:terminalPulse 2s cubic-bezier(0.4,0,0.6,1) infinite;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-low":"#151c25","secondary-container":"#03b5d3","surface-tint":"#4edea3","on-tertiary-container":"#4600a7","surface":"#0d141d","surface-container-lowest":"#080f17","on-secondary-fixed":"#001f26","primary-fixed-dim":"#4edea3","outline-variant":"#3c4a42","on-primary-container":"#00422b","primary":"#4edea3","surface-variant":"#2e353f","on-primary-fixed":"#002113","on-error":"#690005","error":"#ffb4ab","on-tertiary-fixed-variant":"#5516be","surface-dim":"#0d141d","inverse-surface":"#dce3f0","surface-bright":"#333a44","tertiary-fixed-dim":"#d0bcff","surface-container":"#192029","on-tertiary":"#3c0091","inverse-primary":"#006c49","tertiary":"#d0bcff","tertiary-fixed":"#e9ddff","on-background":"#dce3f0","background":"#0d141d","inverse-on-surface":"#2a313b","on-secondary-fixed-variant":"#004e5c","surface-container-highest":"#2e353f","on-error-container":"#ffdad6","on-surface-variant":"#bbcabf","primary-container":"#10b981","secondary-fixed":"#acedff","error-container":"#93000a","on-primary-fixed-variant":"#005236","on-primary":"#003824","surface-container-high":"#232a34","on-secondary":"#003640","on-surface":"#dce3f0","primary-fixed":"#6ffbbe","secondary":"#4cd7f6","tertiary-container":"#b090ff","on-secondary-container":"#00424e","outline":"#86948a","on-tertiary-fixed":"#23005c","secondary-fixed-dim":"#4cd7f6"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xl":"4rem","gutter-mobile":"1rem","space-xs":"0.25rem","space-md":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem","gutter":"1.5rem","margin-mobile":"1.25rem","margin":"2.5rem"},"fontFamily":{"label-micro":["JetBrains Mono"],"headline-sm":["Space Mono"],"display-hero":["Space Mono"],"body-sm":["Inter"],"headline-md":["Space Mono"],"display-hero-mobile":["Space Mono"],"body-md":["Inter"],"label-code":["JetBrains Mono"],"headline-lg":["Space Mono"],"headline-lg-mobile":["Space Mono"],"body-lg":["Inter"]},"fontSize":{"label-micro":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.04em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"label-code":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-xl border-b border-outline-variant/50"><div class="h-16 max-w-[1200px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm focus:outline-none" href="#"><img alt="ZHIDAN.DEV Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VA9LdNjliRSG3orzSeu6iHTsZ4h8hSLPLcxXfjS2RwsSqY_LhG0YQyc749C1opz_xWAYLdZqZSQIzf-uvSUSPAG1_dqScAB000cLPVFKI2aWKVZ0zu1rbG6Ex1jvKlBpGqGj4fa8EXDDyu-gTAdAJ5rQnucLGbA-3xT6j-uFZRlovSYvtWk3M2I5PunOts3ehBzx2ok0PH5erkPNh25TGNrkVxhzXqd25zP6a6RWo"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">ZHIDAN<span class="text-primary">.DEV</span></span></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high/60 border border-outline-variant/60 rounded"><span class="w-1.5 h-1.5 rounded-full bg-primary status-pulse"></span><span class="font-label-micro text-label-micro text-primary uppercase tracking-widest">AVAILABLE // BUILDING THINGS</span></div></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary border-b-2 border-primary"><a aria-current="page" class="font-label-code transition-colors py-1 text-primary border-b-2 border-primary" data-path="home" href="#hero">Home</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="about" href="#about">About</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="projects" href="#projects">Projects</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="experience" href="#experience">Experience</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="tech-stack" href="#skills">Tech Stack</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="contact" href="#contact">Contact</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs"><span class="font-label-micro text-label-micro text-on-surface-variant px-space-xs py-1 border border-outline-variant/60 bg-surface-container-low rounded font-mono">[ LVL.04 DEV ]</span><a class="font-label-micro text-label-micro px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest text-secondary border border-secondary/30 rounded transition-colors flex items-center gap-1" href="#">[ CV ↗ ]</a></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- AMBIENT SCANLINE & GRID BACKGROUND WRAPPER -->
+<div class="relative w-full overflow-hidden bg-surface text-on-surface">
+<!-- Matrix Grid Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(#4edea3_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-surface/40 to-surface"></div>
+<!-- SECTION 1: HERO SECTION -->
+<section class="relative w-full max-w-[1200px] mx-auto px-margin pt-space-xl pb-space-2xl" id="hero">
+<!-- HUD Floating Metadata Tag -->
+<div class="flex items-center justify-between pb-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low shadow-sm">
+<span class="w-2 h-2 bg-primary status-pulse"></span>
+<span class="font-label-micro text-label-micro text-primary uppercase tracking-widest">LOC: 0x00_INIT // BOOT_SEQ_COMPLETE</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-sm font-label-micro text-label-micro text-outline">
+<span>COORDS: [0.7893° N, 101.4478° E]</span>
+<span>//</span>
+<span>NET: STABLE</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Hero Content (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Pixel Prompt Pill -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container text-primary font-label-code text-label-code w-fit">
+<span>&gt; HELLO WORLD_</span>
+<span class="inline-block w-2 h-4 bg-primary animate-pulse"></span>
+</div>
+<!-- Hero Headline -->
+<h1 class="font-display-hero text-display-hero uppercase tracking-tight text-on-surface">
+            Hi, I'm <span class="text-primary hover:underline transition-all">Zhidan</span>. I build software, 
+            <span class="text-secondary">AI systems</span>, and 
+            <span class="text-tertiary">digital experiences</span>.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Informatics Engineering student focused on software development, computer vision, web applications, and practical technology solutions calibrated for real-world reliability.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="px-space-lg py-space-sm bg-primary text-on-primary font-label-code text-label-code font-bold uppercase tracking-wider hover:bg-surface-tint hover:shadow-lg transition-all flex items-center gap-2" href="#projects">
+<span>&gt; RUN_PROJECTS</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+<a class="px-space-md py-space-sm bg-surface-container-high text-secondary hover:bg-surface-variant font-label-code text-label-code uppercase transition-all flex items-center gap-2 shadow-sm" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>[ GITHUB ↗ ]</span>
+</a>
+<a class="px-space-md py-space-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-code text-label-code uppercase transition-all" href="#contact">
+<span>[ DOWNLOAD CV ]</span>
+</a>
+</div>
+<!-- Specs Metadata Box -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-md">
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-micro text-label-micro text-outline uppercase block">ROLE</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Software Dev</span>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-micro text-label-micro text-outline uppercase block">FOCUS</span>
+<span class="font-label-code text-label-code text-secondary">Web / CV / Edge AI</span>
+</div>
+<div class="p-space-sm bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-micro text-label-micro text-outline uppercase block">LOCATION</span>
+<span class="font-label-code text-label-code text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Indonesia [ID]
+              </span>
+</div>
+</div>
+</div>
+<!-- Right Hero Battlestation / Avatar Vector (5 Cols) -->
+<div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+<!-- Background Ambient Glow -->
+<div class="absolute -inset-4 bg-gradient-to-r from-primary/10 via-secondary/10 to-transparent blur-2xl -z-10"></div>
+<!-- Main Terminal Glass Card -->
+<div class="relative bg-surface-container-low p-space-md shadow-xl">
+<!-- Window Bar -->
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container-lowest px-space-sm py-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-error"></span>
+<span class="w-2.5 h-2.5 bg-secondary-container"></span>
+<span class="w-2.5 h-2.5 bg-primary"></span>
+<span class="font-label-micro text-label-micro text-outline ml-2">zhidan@battlestation: ~/workspace</span>
+</div>
+<span class="font-label-micro text-label-micro text-primary">PORT: 8080</span>
+</div>
+<!-- Stylized Battlestation SVG Workspace Art -->
+<div class="w-full bg-surface-container-lowest p-space-sm overflow-hidden flex items-center justify-center relative">
+<svg class="w-full h-auto max-h-[340px]" fill="none" viewbox="0 0 460 320" xmlns="http://www.w3.org/2000/svg">
+<!-- Desk Surface -->
+<rect fill="#232a34" height="12" width="400" x="30" y="240"></rect>
+<rect fill="#151c25" height="60" width="20" x="50" y="252"></rect>
+<rect fill="#151c25" height="60" width="20" x="390" y="252"></rect>
+<!-- Main Ultrawide Monitor -->
+<rect fill="#0d141d" height="140" width="210" x="90" y="60"></rect>
+<rect fill="#232a34" height="40" width="20" x="185" y="200"></rect>
+<rect fill="#3c4a42" height="4" width="70" x="160" y="236"></rect>
+<!-- Monitor Screen Code Grid -->
+<line stroke="#4edea3" stroke-linecap="round" stroke-width="3" x1="105" x2="190" y1="80" y2="80"></line>
+<line stroke="#4cd7f6" stroke-linecap="round" stroke-width="2" x1="105" x2="220" y1="95" y2="95"></line>
+<line stroke="#86948a" stroke-linecap="round" stroke-width="2" x1="105" x2="160" y1="110" y2="110"></line>
+<line stroke="#d0bcff" stroke-linecap="round" stroke-width="2" x1="120" x2="240" y1="125" y2="125"></line>
+<line stroke="#4edea3" stroke-linecap="round" stroke-width="2" x1="120" x2="210" y1="140" y2="140"></line>
+<line stroke="#3c4a42" stroke-linecap="round" stroke-width="2" x1="105" x2="150" y1="155" y2="155"></line>
+<rect fill="#4edea3" height="12" opacity="0.8" width="10" x="105" y="170"></rect>
+<!-- Computer Vision Bounding Box Graphic on Screen -->
+<rect fill="#4edea3" fill-opacity="0.08" height="70" stroke="#4edea3" stroke-dasharray="4 2" stroke-width="1.5" width="70" x="215" y="115"></rect>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="8" x="218" y="125">TARGET: 98.4%</text>
+<circle cx="250" cy="150" r="14" stroke="#4cd7f6" stroke-width="1"></circle>
+<path d="M250 142 V158 M242 150 H258" stroke="#4cd7f6" stroke-width="1"></path>
+<!-- Vertical Secondary Monitor -->
+<rect fill="#0d141d" height="155" width="80" x="315" y="50"></rect>
+<rect fill="#232a34" height="35" width="10" x="350" y="205"></rect>
+<rect fill="#3c4a42" height="4" width="40" x="335" y="236"></rect>
+<!-- Vertical Terminal Stream -->
+<line stroke="#4cd7f6" stroke-width="2" x1="325" x2="385" y1="65" y2="65"></line>
+<line stroke="#86948a" stroke-width="1.5" x1="325" x2="370" y1="78" y2="78"></line>
+<line stroke="#86948a" stroke-width="1.5" x1="325" x2="380" y1="90" y2="90"></line>
+<line stroke="#4edea3" stroke-width="1.5" x1="325" x2="360" y1="102" y2="102"></line>
+<line stroke="#d0bcff" stroke-width="1.5" x1="325" x2="385" y1="114" y2="114"></line>
+<line stroke="#86948a" stroke-width="1.5" x1="325" x2="350" y1="126" y2="126"></line>
+<line stroke="#4cd7f6" stroke-width="1.5" x1="325" x2="375" y1="138" y2="138"></line>
+<line stroke="#4edea3" stroke-width="1.5" x1="325" x2="382" y1="150" y2="150"></line>
+<line stroke="#86948a" stroke-width="1.5" x1="325" x2="345" y1="162" y2="162"></line>
+<line stroke="#86948a" stroke-width="1.5" x1="325" x2="368" y1="174" y2="174"></line>
+<line stroke="#4edea3" stroke-width="1.5" x1="325" x2="380" y1="186" y2="186"></line>
+<!-- Mechanical Keyboard & Mouse -->
+<rect fill="#151c25" height="8" width="110" x="140" y="244"></rect>
+<rect fill="#4edea3" height="2" opacity="0.6" width="90" x="150" y="242"></rect>
+<rect fill="#151c25" height="8" width="16" x="270" y="244"></rect>
+<!-- Dev Figurine / Pixel Avatar Back View -->
+<rect fill="#2e353f" height="40" width="30" x="180" y="200"></rect>
+<circle cx="195" cy="188" fill="#151c25" r="14"></circle>
+<!-- Headphone band -->
+<path d="M182 188 C182 178, 208 178, 208 188" fill="none" stroke="#4edea3" stroke-width="2.5"></path>
+<rect fill="#4edea3" height="8" width="3" x="180" y="184"></rect>
+<rect fill="#4edea3" height="8" width="3" x="207" y="184"></rect>
+<!-- Coffee Mug with Steam -->
+<rect fill="#151c25" height="15" width="14" x="80" y="235"></rect>
+<path d="M85 228 Q83 224 85 220" fill="none" opacity="0.6" stroke="#bbcabf" stroke-linecap="round" stroke-width="1"></path>
+<path d="M89 230 Q87 226 89 222" fill="none" opacity="0.6" stroke="#bbcabf" stroke-linecap="round" stroke-width="1"></path>
+</svg>
+</div>
+<!-- Floating Telemetry HUD Cards Overlaid -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<!-- Top HUD -->
+<div class="flex items-center justify-between px-space-sm py-1 bg-surface-container text-on-surface">
+<span class="font-label-micro text-label-micro text-outline">HARDWARE_TELEMETRY</span>
+<span class="font-label-micro text-label-micro text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-primary status-pulse"></span> ONLINE [SYS_STABLE]
+                </span>
+</div>
+<!-- Middle HUD -->
+<div class="px-space-sm py-1.5 bg-surface-container text-on-surface flex items-center justify-between">
+<span class="font-label-micro text-label-micro text-on-surface-variant">ACTIVE QUEST:</span>
+<span class="font-label-code text-label-code text-secondary font-semibold">Edge YOLO Vision System</span>
+</div>
+<!-- Bottom HUD EXP Progress -->
+<div class="px-space-sm py-2 bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-micro text-label-micro">
+<span class="text-primary font-bold">LVL.04 DEV [EXP PROGRESS]</span>
+<span class="text-on-surface-variant">8,450 / 10,000 XP (84%)</span>
+</div>
+<!-- Pixel Progress Bar -->
+<div class="w-full h-3 bg-surface-container-lowest p-0.5 flex gap-0.5">
+<div class="h-full w-[84%] bg-primary"></div>
+<div class="h-full w-[16%] bg-surface-variant"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: ABOUT SECTION (02 // ABOUT_ME / PLAYER PROFILE) -->
+<section class="w-full bg-surface-container-lowest/70 py-space-2xl" id="about">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs pb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary">[ 02 // ABOUT_ME ]</span>
+<span class="h-px bg-surface-container flex-1"></span>
+<span class="font-label-micro text-label-micro text-outline">CLASS: INFORMATICS_ENGINEER</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">PLAYER PROFILE &amp; MISSION</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Narrative Story (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="font-label-code text-label-code text-secondary uppercase">// EXECUTE_BIO_SUMMARY</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                I am an <strong class="text-primary font-semibold">Informatics Engineering student</strong> obsessed with the mechanics of resilient computing. My engineering path navigates the intersection between structured software design patterns, dynamic full-stack architectures, and high-throughput computer vision engines.
+              </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Rather than treating machine learning and web systems as isolated verticals, I focus on unifying them: deploying deep metric facial recognition onto production microservices, building synchronized hardware-adjacent attendance pipelines, and crafting clean user interfaces that don't compromise system performance.
+              </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Every project I build is treated like an engineering campaign: structured requirements, clean git workflows, benchmarked latency budgets, and rigorous interface clarity.
+              </p>
+<!-- Core Philosophy Snippet -->
+<div class="p-space-md bg-surface-container flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-[28px]">terminal</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-code text-label-code text-primary font-bold">CORE OPERATING DIRECTIVE:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">"Simplicity in interface, uncompromising rigor in architecture, practical utility over decorative hype."</span>
+</div>
+</div>
+</div>
+<!-- Quick Specs Row -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-micro text-label-micro text-outline uppercase block">COMMITS (YTD)</span>
+<span class="font-headline-sm text-headline-sm text-primary">640+</span>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-micro text-label-micro text-outline uppercase block">MODELS TRAINED</span>
+<span class="font-headline-sm text-headline-sm text-secondary">24</span>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-micro text-label-micro text-outline uppercase block">PROD DEPLOYS</span>
+<span class="font-headline-sm text-headline-sm text-tertiary">12</span>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-micro text-label-micro text-outline uppercase block">UPTIME RECORD</span>
+<span class="font-headline-sm text-headline-sm text-primary">99.9%</span>
+</div>
+</div>
+</div>
+<!-- Right Column: RPG Stat Card (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container p-space-lg shadow-md flex flex-col gap-space-md">
+<!-- Header with Corner Pixel Indicator -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-high px-space-sm py-1.5">
+<span class="font-label-code text-label-code text-primary font-bold">[ CHARACTER_RECORD ]</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">ID: 0x4E_ZHIDAN</span>
+</div>
+<!-- Profile Info Grid -->
+<div class="space-y-space-xs text-sm">
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm">
+<span class="font-label-code text-label-code text-outline uppercase">NAME:</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">Zhidan</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm">
+<span class="font-label-code text-label-code text-outline uppercase">CLASS:</span>
+<span class="font-label-code text-label-code text-secondary">Informatics Engineering</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm">
+<span class="font-label-code text-label-code text-outline uppercase">SPECIALIZATION:</span>
+<span class="font-label-code text-label-code text-on-surface">Full-Stack &amp; Vision Systems</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm">
+<span class="font-label-code text-label-code text-outline uppercase">AFFILIATION:</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Universitas Riau</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm">
+<span class="font-label-code text-label-code text-outline uppercase">STATUS:</span>
+<span class="font-label-code text-label-code text-primary font-bold">ACTIVE // BUILDING</span>
+</div>
+</div>
+<!-- Attribute Ranks -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-micro text-label-micro text-outline uppercase">ATTRIBUTES RANKING</span>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<span class="font-label-code text-label-code text-on-surface">Web Architecture</span>
+<span class="font-label-micro text-label-micro px-2 py-0.5 bg-primary text-on-primary font-bold">[ RANK S ]</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<span class="font-label-code text-label-code text-on-surface">Computer Vision &amp; YOLO</span>
+<span class="font-label-micro text-label-micro px-2 py-0.5 bg-secondary text-on-secondary font-bold">[ RANK A+ ]</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<span class="font-label-code text-label-code text-on-surface">Edge AI &amp; Deep Metric Models</span>
+<span class="font-label-micro text-label-micro px-2 py-0.5 bg-tertiary text-on-tertiary font-bold">[ RANK A ]</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<span class="font-label-code text-label-code text-on-surface">Network Protocols &amp; Sockets</span>
+<span class="font-label-micro text-label-micro px-2 py-0.5 bg-surface-container-highest text-on-surface font-bold">[ RANK B+ ]</span>
+</div>
+</div>
+<!-- Loadout / Inventory -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-micro text-label-micro text-outline uppercase">TACTICAL LOADOUT [TOOLS]</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-space-xs py-1 bg-surface-container-high font-label-micro text-label-micro text-on-surface-variant">VS Code (Vim Mode)</span>
+<span class="px-space-xs py-1 bg-surface-container-high font-label-micro text-label-micro text-primary">Linux WSL2</span>
+<span class="px-space-xs py-1 bg-surface-container-high font-label-micro text-label-micro text-secondary">Docker CLI</span>
+<span class="px-space-xs py-1 bg-surface-container-high font-label-micro text-label-micro text-tertiary">Git Shell</span>
+<span class="px-space-xs py-1 bg-surface-container-high font-label-micro text-label-micro text-on-surface-variant">Postman</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: SELECTED PROJECTS (03 // SELECTED_PROJECTS) -->
+<section class="w-full py-space-2xl" id="projects">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-space-md pb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary">[ 03 // SELECTED_PROJECTS ]</span>
+<span class="font-label-micro text-label-micro text-outline">STATUS: 4 RELEASED</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">PROTOTYPES &amp; PRODUCTION APPS</h2>
+</div>
+<a class="font-label-code text-label-code text-secondary hover:text-primary transition-colors flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>[ VIEW_ALL_REPOSITORIES → ]</span>
+</a>
+</div>
+<!-- Project Grid (2x2 Asymmetric Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- CARD 01: PPE Compliance Detection -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group relative">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro px-space-xs py-1 bg-primary/10 text-primary uppercase">[ Computer Vision / AI ]</span>
+<span class="font-label-code text-label-code text-outline group-hover:text-primary transition-colors">01 // LOC: 0xAA</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                PPE Compliance Detection System
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Real-time industrial personal protective equipment (safety helmet, vest, and goggles) compliance monitoring pipeline utilizing fine-tuned YOLO models with automated instant dispatch to safety officers via Telegram Webhook.
+              </p>
+<!-- Inline Visual Teaser: Vision Detection Wireframe -->
+<div class="w-full bg-surface-container-lowest p-space-sm relative overflow-hidden flex items-center justify-between font-label-micro text-label-micro text-primary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">videocam</span>
+<span>FPS: 32.4 // INFERENCE: 18ms</span>
+</div>
+<span class="text-secondary">ACCURACY: 96.2% mAP</span>
+</div>
+<!-- Tech Pills -->
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-on-surface">Python</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-primary">YOLOv8</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-secondary">OpenCV</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-on-surface-variant">Telegram Bot API</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-md pt-space-lg">
+<a class="font-label-code text-label-code text-primary hover:underline flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>[ GitHub ↗ ]</span>
+</a>
+<a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface flex items-center gap-1" href="#">
+<span>[ Live Demo → ]</span>
+</a>
+</div>
+</div>
+<!-- CARD 02: Employee Attendance - Face Recognition -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group relative">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro px-space-xs py-1 bg-secondary/10 text-secondary uppercase">[ Computer Vision / Web ]</span>
+<span class="font-label-code text-label-code text-outline group-hover:text-secondary transition-colors">02 // LOC: 0xAB</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">
+                Employee Attendance — Face Recognition
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Web-based high-throughput enterprise attendance platform leveraging deep metric facial recognition, vector embeddings similarity matching, and liveness anti-spoofing to prevent photographic fraud.
+              </p>
+<!-- Inline Visual Teaser: Vector Distance Matrix -->
+<div class="w-full bg-surface-container-lowest p-space-sm relative overflow-hidden flex items-center justify-between font-label-micro text-label-micro text-secondary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">face</span>
+<span>ARCFACE COSINE DIST: 0.14</span>
+</div>
+<span class="text-primary">[ SPOOF_CHECK: PASSED ]</span>
+</div>
+<!-- Tech Pills -->
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-on-surface">Python</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-secondary">InsightFace</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-primary">ArcFace</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-tertiary">FastAPI</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-md pt-space-lg">
+<a class="font-label-code text-label-code text-secondary hover:underline flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>[ GitHub ↗ ]</span>
+</a>
+<a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface flex items-center gap-1" href="#">
+<span>[ Live Demo → ]</span>
+</a>
+</div>
+</div>
+<!-- CARD 03: SIMBA - Internship Management System -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group relative">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro px-space-xs py-1 bg-tertiary/10 text-tertiary uppercase">[ Full Stack Web ]</span>
+<span class="font-label-code text-label-code text-outline group-hover:text-tertiary transition-colors">03 // LOC: 0xAC</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-tertiary transition-colors">
+                SIMBA — Internship Management System
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Comprehensive university-level internship management ecosystem featuring tiered role authorizations (students, academic advisors, field supervisors), GPS geofenced check-ins, automated logbook PDF compilation, and verifiable digital QR signatures.
+              </p>
+<!-- Inline Visual Teaser: Telemetry Bar -->
+<div class="w-full bg-surface-container-lowest p-space-sm relative overflow-hidden flex items-center justify-between font-label-micro text-label-micro text-tertiary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
+<span>GEOFENCE RADIUS: 50m</span>
+</div>
+<span class="text-on-surface">USERS: 1,200+ ACTIVE</span>
+</div>
+<!-- Tech Pills -->
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-primary">Laravel 10</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-on-surface">MySQL</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-secondary">Bootstrap 5</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-on-surface-variant">JavaScript</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-md pt-space-lg">
+<a class="font-label-code text-label-code text-tertiary hover:underline flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>[ GitHub ↗ ]</span>
+</a>
+<a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface flex items-center gap-1" href="#">
+<span>[ Live Demo → ]</span>
+</a>
+</div>
+</div>
+<!-- CARD 04: InnoElectrica Conference Platform -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group relative">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro px-space-xs py-1 bg-primary/10 text-primary uppercase">[ Modern Event Platform ]</span>
+<span class="font-label-code text-label-code text-outline group-hover:text-primary transition-colors">04 // LOC: 0xAD</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                InnoElectrica Engineering Summit
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                High-performance electrical engineering conference web portal engineered with Next.js 14 server components, fluid Framer Motion transitions, dynamic live schedule streaming, and instant attendee credential pass generation.
+              </p>
+<!-- Inline Visual Teaser: Speed Metric -->
+<div class="w-full bg-surface-container-lowest p-space-sm relative overflow-hidden flex items-center justify-between font-label-micro text-label-micro text-primary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">speed</span>
+<span>LIGHTHOUSE SCORE: 99/100</span>
+</div>
+<span class="text-secondary">SSR TIME: 42ms</span>
+</div>
+<!-- Tech Pills -->
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-primary">Next.js 14</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-secondary">Tailwind CSS</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-tertiary">Framer Motion</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high font-label-micro text-label-micro text-on-surface">TypeScript</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-md pt-space-lg">
+<a class="font-label-code text-label-code text-primary hover:underline flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>[ GitHub ↗ ]</span>
+</a>
+<a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface flex items-center gap-1" href="#">
+<span>[ Live Demo → ]</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: EXPERIENCE SECTION (04 // EXPERIENCE_LOG) -->
+<section class="w-full bg-surface-container-lowest/80 py-space-2xl" id="experience">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs pb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary">[ 04 // EXPERIENCE_LOG ]</span>
+<span class="h-px bg-surface-container flex-1"></span>
+<span class="font-label-micro text-label-micro text-outline">LEVEL PROGRESSION TIMELINE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">MISSION CHRONOLOGY &amp; SITES</h2>
+</div>
+<!-- Level Progression Flow (Pixel Nodes) -->
+<div class="relative flex flex-col gap-space-lg pl-6 md:pl-10">
+<!-- Continuous Vertical Timeline Spine -->
+<div class="absolute left-2.5 md:left-4 top-2 bottom-4 w-0.5 bg-surface-variant"></div>
+<!-- NODE 01: PT Semen Padang -->
+<div class="relative flex flex-col gap-space-sm">
+<!-- Pixel Node Marker -->
+<div class="absolute -left-6 md:-left-10 top-1 w-5 h-5 bg-surface-container-lowest flex items-center justify-center">
+<span class="w-3 h-3 bg-primary status-pulse"></span>
+</div>
+<div class="bg-surface-container-low p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface">PT Semen Padang</span>
+<span class="font-label-micro text-label-micro px-2 py-0.5 bg-primary text-on-primary font-bold">[ ACTIVE MISSION ]</span>
+</div>
+<span class="font-label-code text-label-code text-primary">2026 // PRESENT</span>
+</div>
+<div class="font-label-code text-label-code text-secondary pb-space-sm">IT Site Support / MBKM Internship</div>
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+                Embedded within the industrial site IT department. Spearheading local infrastructure reliability, diagnosing manufacturing workstation network connectivity, testing edge computer vision prototypes for plant floor safety protocols, and developing internal administrative automation tools.
+              </p>
+<!-- Tags -->
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Infrastructure Support</span>
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">IT Troubleshooting</span>
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-primary">Computer Vision Prototyping</span>
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-secondary">Internal Web Tools</span>
+</div>
+</div>
+</div>
+<!-- NODE 02: IEEE Student Branch -->
+<div class="relative flex flex-col gap-space-sm">
+<div class="absolute -left-6 md:-left-10 top-1 w-5 h-5 bg-surface-container-lowest flex items-center justify-center">
+<span class="w-3 h-3 bg-secondary"></span>
+</div>
+<div class="bg-surface-container-low p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface">IEEE Student Branch Universitas Riau</span>
+<span class="font-label-micro text-label-micro px-2 py-0.5 bg-surface-container-high text-secondary">[ COMPLETED ]</span>
+</div>
+<span class="font-label-code text-label-code text-secondary">2025 – 2026</span>
+</div>
+<div class="font-label-code text-label-code text-secondary pb-space-sm">Information &amp; Creative Media Division</div>
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+                Coordinated digital systems architecture, delivered hands-on developer workshops on modern web tools, and engineered visual communications infrastructure for regional academic and research events.
+              </p>
+<!-- Tags -->
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Technical Workshops</span>
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-secondary">Information Systems</span>
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-on-surface-variant">Digital Media Systems</span>
+</div>
+</div>
+</div>
+<!-- NODE 03: HIMATRO FT UNRI -->
+<div class="relative flex flex-col gap-space-sm">
+<div class="absolute -left-6 md:-left-10 top-1 w-5 h-5 bg-surface-container-lowest flex items-center justify-center">
+<span class="w-3 h-3 bg-outline"></span>
+</div>
+<div class="bg-surface-container-low p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface">HIMATRO FT Universitas Riau</span>
+<span class="font-label-micro text-label-micro px-2 py-0.5 bg-surface-container-high text-outline">[ ARCHIVED ]</span>
+</div>
+<span class="font-label-code text-label-code text-outline">2024 – 2025</span>
+</div>
+<div class="font-label-code text-label-code text-outline pb-space-sm">Communication &amp; Information Bureau</div>
+<p class="font-body-md text-body-md text-on-surface-variant pb-space-md">
+                Maintained the department student portal, automated mass announcement dissemination systems, and administered central digital repositories for academic and competition resources.
+              </p>
+<!-- Tags -->
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Web Portal Ops</span>
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Information Logistics</span>
+<span class="px-space-xs py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Asset Pipelines</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: TECH STACK & RPG STATS (05 // TECH_STACK) -->
+<section class="w-full py-space-2xl" id="skills">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs pb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary">[ 05 // TECH_STACK ]</span>
+<span class="h-px bg-surface-container flex-1"></span>
+<span class="font-label-micro text-label-micro text-outline">ARSENAL SPECIFICATION</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">STACK MATRIX &amp; RPG METRICS</h2>
+</div>
+<!-- Two Column: Left Category Grid / Right RPG Stat Bars -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left: 5 Tech Categories (7 Cols) -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Category 1: WEB -->
+<div class="bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center gap-2 pb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">web</span>
+<span class="font-label-code text-label-code text-primary font-bold uppercase">Web Development</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Laravel</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">PHP</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Next.js</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">JavaScript</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Tailwind CSS</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Bootstrap 5</span>
+</div>
+</div>
+<!-- Category 2: AI / CV -->
+<div class="bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center gap-2 pb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
+<span class="font-label-code text-label-code text-secondary font-bold uppercase">AI &amp; Computer Vision</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Python</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-secondary">YOLOv8</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">OpenCV</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">InsightFace</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">ArcFace</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">PyTorch</span>
+</div>
+</div>
+<!-- Category 3: DATABASE -->
+<div class="bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center gap-2 pb-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">database</span>
+<span class="font-label-code text-label-code text-tertiary font-bold uppercase">Databases</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">MySQL</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-tertiary">PostgreSQL</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Oracle SQL</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Redis (Cache)</span>
+</div>
+</div>
+<!-- Category 4: TOOLS & DEVOPS -->
+<div class="bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center gap-2 pb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+<span class="font-label-code text-label-code text-primary font-bold uppercase">DevOps &amp; Tooling</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Git / GitHub</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Linux / WSL</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-primary">Docker</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">VS Code</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Postman</span>
+</div>
+</div>
+<!-- Category 5: NETWORKING (Spans full 2 cols on tablet) -->
+<div class="bg-surface-container-low p-space-md shadow-sm sm:col-span-2">
+<div class="flex items-center gap-2 pb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">lan</span>
+<span class="font-label-code text-label-code text-secondary font-bold uppercase">Networking &amp; Protocols</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Cisco Packet Tracer</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-secondary">TCP/IP Stack</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Socket Programming</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">RESTful Architecture</span>
+<span class="px-2 py-1 bg-surface-container font-label-micro text-label-micro text-on-surface">Subnetting / VLAN</span>
+</div>
+</div>
+</div>
+<!-- Right: RPG Stat Progression Bars (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container p-space-lg shadow-md flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-high px-space-sm py-1.5">
+<span class="font-label-code text-label-code text-primary font-bold">[ SKILL_PROGRESSION ]</span>
+<span class="font-label-micro text-label-micro text-outline">REAL-TIME TELEMETRY</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Bar 1: WEB -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-code text-label-code">
+<span class="text-on-surface">WEB DEVELOPMENT</span>
+<span class="text-primary font-bold">[█████████░] 90%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest p-0.5 flex gap-0.5">
+<div class="h-full w-[90%] bg-primary"></div>
+<div class="h-full w-[10%] bg-surface-variant"></div>
+</div>
+</div>
+<!-- Bar 2: COMPUTER VISION -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-code text-label-code">
+<span class="text-on-surface">COMPUTER VISION</span>
+<span class="text-secondary font-bold">[████████░░] 80%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest p-0.5 flex gap-0.5">
+<div class="h-full w-[80%] bg-secondary"></div>
+<div class="h-full w-[20%] bg-surface-variant"></div>
+</div>
+</div>
+<!-- Bar 3: NETWORKING & INFRA -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-code text-label-code">
+<span class="text-on-surface">NETWORKING &amp; INFRA</span>
+<span class="text-tertiary font-bold">[██████░░░░] 60%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest p-0.5 flex gap-0.5">
+<div class="h-full w-[60%] bg-tertiary"></div>
+<div class="h-full w-[40%] bg-surface-variant"></div>
+</div>
+</div>
+<!-- Bar 4: SYSTEM ARCHITECTURE -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-code text-label-code">
+<span class="text-on-surface">SYSTEM ARCHITECTURE</span>
+<span class="text-on-surface font-bold">[███████░░░] 70%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest p-0.5 flex gap-0.5">
+<div class="h-full w-[70%] bg-surface-tint"></div>
+<div class="h-full w-[30%] bg-surface-variant"></div>
+</div>
+</div>
+</div>
+<!-- Terminal Info Callout -->
+<div class="p-space-sm bg-surface-container-lowest flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">info</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Progression metrics are based on benchmarked project deliveries, unit test coverage, and continuous production deployments.
+              </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CURRENT QUESTS (CURRENT ACTIVITY DASHBOARD) -->
+<section class="w-full bg-surface-container-lowest/70 py-space-2xl">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs pb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-secondary">[ ACTIVE_SIDE_QUESTS ]</span>
+<span class="h-px bg-surface-container flex-1"></span>
+<span class="font-label-micro text-label-micro text-outline">IN_PROGRESS_TASKS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">CURRENT CAMPAIGNS</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">What I am actively learning, experimenting with, and refining in the lab.</p>
+</div>
+<!-- 4 Quest Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Quest 01 -->
+<div class="p-space-md bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro text-primary">QUEST #01</span>
+<span class="w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Computer Vision</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Improving PPE detection accuracy under low-light environmental conditions via synthetic illumination augmentation.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest px-2 py-1">
+<span class="font-label-micro text-label-micro text-outline">STATUS:</span>
+<span class="font-label-micro text-label-micro text-primary font-bold">75% BENCHMARKED</span>
+</div>
+</div>
+<!-- Quest 02 -->
+<div class="p-space-md bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro text-secondary">QUEST #02</span>
+<span class="w-2 h-2 bg-secondary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Networking</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Deep-diving into asynchronous client-server architectures, epoll event loops, and raw socket protocols.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest px-2 py-1">
+<span class="font-label-micro text-label-micro text-outline">STATUS:</span>
+<span class="font-label-micro text-label-micro text-secondary font-bold">50% IMPLEMENTED</span>
+</div>
+</div>
+<!-- Quest 03 -->
+<div class="p-space-md bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro text-tertiary">QUEST #03</span>
+<span class="w-2 h-2 bg-tertiary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors">Software Eng</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Building resilient, production-ready micro-services with Redis caching and distributed task queues.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest px-2 py-1">
+<span class="font-label-micro text-label-micro text-outline">STATUS:</span>
+<span class="font-label-micro text-label-micro text-tertiary font-bold">90% WRAPPED</span>
+</div>
+</div>
+<!-- Quest 04 -->
+<div class="p-space-md bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro text-primary">QUEST #04</span>
+<span class="w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Edge AI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Exploring practical on-device edge AI inference with quantized INT8 models deployed on Raspberry Pi 5.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest px-2 py-1">
+<span class="font-label-micro text-label-micro text-outline">STATUS:</span>
+<span class="font-label-micro text-label-micro text-primary font-bold">60% TESTED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: DEV ACTIVITY CONSOLE (06 // DEV_ACTIVITY) -->
+<section class="w-full py-space-2xl">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs pb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary">[ 06 // DEV_ACTIVITY ]</span>
+<span class="h-px bg-surface-container flex-1"></span>
+<span class="font-label-micro text-label-micro text-outline">BASH SESSION REPLAY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">TERMINAL MAINFRAME &amp; HEATMAP</h2>
+</div>
+<!-- Terminal Window Frame -->
+<div class="bg-surface-container-lowest p-space-md shadow-2xl">
+<!-- Terminal Titlebar -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-high px-space-sm py-1.5">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-error"></span>
+<span class="w-3 h-3 bg-secondary-container"></span>
+<span class="w-3 h-3 bg-primary"></span>
+<span class="font-label-code text-label-code text-on-surface font-semibold ml-2">bash — zhidandev@mainframe: ~</span>
+</div>
+<div class="font-label-micro text-label-micro text-outline">TTY: /dev/pts/1</div>
+</div>
+<!-- Console Body -->
+<div class="p-space-md flex flex-col gap-space-md font-label-code text-label-code text-on-surface">
+<!-- Bash line 1 -->
+<div>
+<span class="text-primary font-bold">zhidan@mainframe:~$</span> <span class="text-on-surface">git status</span>
+<div class="text-on-surface-variant pt-1">
+                On branch <span class="text-secondary">main</span><br/>
+                Your branch is up to date with 'origin/main'.<br/>
+                Changes staged for commit:<br/>
+                  <span class="text-primary">(modified:  src/cv/yolo_inference_engine.py)</span><br/>
+                  <span class="text-primary">(modified:  src/web/api/attendance_router.py)</span><br/>
+                nothing to commit, working tree clean
+              </div>
+</div>
+<!-- Heatmap Visualization Block -->
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-micro text-label-micro">
+<span>CONTRIBUTION MATRIX // PAST 36 WEEKS</span>
+<span class="flex items-center gap-1">
+<span>Less</span>
+<span class="w-2.5 h-2.5 bg-surface-variant"></span>
+<span class="w-2.5 h-2.5 bg-primary/30"></span>
+<span class="w-2.5 h-2.5 bg-primary/60"></span>
+<span class="w-2.5 h-2.5 bg-primary"></span>
+<span>More</span>
+</span>
+</div>
+<!-- Pixel Heatmap Grid Simulation (SVG) -->
+<div class="w-full overflow-x-auto py-1 bg-surface-container-low p-space-sm">
+<svg class="w-full min-w-[700px] h-[90px]" fill="none" viewbox="0 0 720 90" xmlns="http://www.w3.org/2000/svg">
+<!-- Generating 36 columns of 7 day squares via SVG layout -->
+<g fill="#2e353f">
+<!-- Column loops with varied intensity for authentic GitHub feel -->
+<!-- Week 1-4 -->
+<rect fill="#4edea3" fill-opacity="0.2" height="10" width="10" x="10" y="5"></rect>
+<rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="10" y="17"></rect>
+<rect fill="#2e353f" height="10" width="10" x="10" y="29"></rect>
+<rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="10" y="41"></rect>
+<rect fill="#4edea3" height="10" width="10" x="10" y="53"></rect>
+<rect fill="#2e353f" height="10" width="10" x="10" y="65"></rect>
+<rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="10" y="77"></rect>
+<rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="25" y="5"></rect>
+<rect fill="#4edea3" height="10" width="10" x="25" y="17"></rect>
+<rect fill="#4edea3" fill-opacity="0.3" height="10" width="10" x="25" y="29"></rect>
+<rect fill="#2e353f" height="10" width="10" x="25" y="41"></rect>
+<rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="25" y="53"></rect>
+<rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="25" y="65"></rect>
+<rect fill="#2e353f" height="10" width="10" x="25" y="77"></rect>
+<rect fill="#2e353f" height="10" width="10" x="40" y="5"></rect>
+<rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="40" y="17"></rect>
+<rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="40" y="29"></rect>
+<rect fill="#4edea3" height="10" width="10" x="40" y="41"></rect>
+<rect fill="#2e353f" height="10" width="10" x="40" y="53"></rect>
+<rect fill="#4edea3" fill-opacity="0.3" height="10" width="10" x="40" y="65"></rect>
+<rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="40" y="77"></rect>
+<!-- Additional visual density columns -->
+<rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="55" y="5"></rect>
+<rect fill="#4edea3" height="10" width="10" x="55" y="17"></rect>
+<rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="55" y="29"></rect>
+<rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="55" y="41"></rect>
+<rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="55" y="53"></rect>
+<rect fill="#2e353f" height="10" width="10" x="55" y="65"></rect>
+<rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="55" y="77"></rect>
+<!-- Repetitive realistic patterns across graph -->
+<g transform="translate(60, 0)">
+<rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="10" y="5"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="10" y="17"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="10" y="29"></rect><rect fill="#2e353f" height="10" width="10" x="10" y="41"></rect><rect fill="#4edea3" height="10" width="10" x="10" y="53"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="10" y="65"></rect><rect fill="#2e353f" height="10" width="10" x="10" y="77"></rect>
+<rect fill="#2e353f" height="10" width="10" x="25" y="5"></rect><rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="25" y="17"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="25" y="29"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="25" y="41"></rect><rect fill="#4edea3" fill-opacity="0.3" height="10" width="10" x="25" y="53"></rect><rect fill="#2e353f" height="10" width="10" x="25" y="65"></rect><rect fill="#4edea3" height="10" width="10" x="25" y="77"></rect>
+<rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="40" y="5"></rect><rect fill="#4edea3" height="10" width="10" x="40" y="17"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="40" y="29"></rect><rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="40" y="41"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="40" y="53"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="40" y="65"></rect><rect fill="#4edea3" height="10" width="10" x="40" y="77"></rect>
+<rect fill="#2e353f" height="10" width="10" x="55" y="5"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="55" y="17"></rect><rect fill="#4edea3" fill-opacity="0.2" height="10" width="10" x="55" y="29"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="55" y="41"></rect><rect fill="#2e353f" height="10" width="10" x="55" y="53"></rect><rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="55" y="65"></rect><rect fill="#2e353f" height="10" width="10" x="55" y="77"></rect>
+</g>
+<g transform="translate(135, 0)">
+<rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="10" y="5"></rect><rect fill="#4edea3" height="10" width="10" x="10" y="17"></rect><rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="10" y="29"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="10" y="41"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="10" y="53"></rect><rect fill="#2e353f" height="10" width="10" x="10" y="65"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="10" y="77"></rect>
+<rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="25" y="5"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="25" y="17"></rect><rect fill="#2e353f" height="10" width="10" x="25" y="29"></rect><rect fill="#4edea3" height="10" width="10" x="25" y="41"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="25" y="53"></rect><rect fill="#4edea3" fill-opacity="0.3" height="10" width="10" x="25" y="65"></rect><rect fill="#2e353f" height="10" width="10" x="25" y="77"></rect>
+<rect fill="#2e353f" height="10" width="10" x="40" y="5"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="40" y="17"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="40" y="29"></rect><rect fill="#2e353f" height="10" width="10" x="40" y="41"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="40" y="53"></rect><rect fill="#4edea3" height="10" width="10" x="40" y="65"></rect><rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="40" y="77"></rect>
+<rect fill="#4edea3" height="10" width="10" x="55" y="5"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="55" y="17"></rect><rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="55" y="29"></rect><rect fill="#2e353f" height="10" width="10" x="55" y="41"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="55" y="53"></rect><rect fill="#4edea3" fill-opacity="0.2" height="10" width="10" x="55" y="65"></rect><rect fill="#4edea3" height="10" width="10" x="55" y="77"></rect>
+</g>
+<g transform="translate(210, 0)">
+<rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="10" y="5"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="10" y="17"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="10" y="29"></rect><rect fill="#4edea3" height="10" width="10" x="10" y="41"></rect><rect fill="#4edea3" fill-opacity="0.3" height="10" width="10" x="10" y="53"></rect><rect fill="#2e353f" height="10" width="10" x="10" y="65"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="10" y="77"></rect>
+<rect fill="#2e353f" height="10" width="10" x="25" y="5"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="25" y="17"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="25" y="29"></rect><rect fill="#4edea3" fill-opacity="0.2" height="10" width="10" x="25" y="41"></rect><rect fill="#4edea3" height="10" width="10" x="25" y="53"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="25" y="65"></rect><rect fill="#2e353f" height="10" width="10" x="25" y="77"></rect>
+<rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="40" y="5"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="40" y="17"></rect><rect fill="#2e353f" height="10" width="10" x="40" y="29"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="40" y="41"></rect><rect fill="#4edea3" height="10" width="10" x="40" y="53"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="40" y="65"></rect><rect fill="#2e353f" height="10" width="10" x="40" y="77"></rect>
+<rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="55" y="5"></rect><rect fill="#4edea3" height="10" width="10" x="55" y="17"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="55" y="29"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="55" y="41"></rect><rect fill="#2e353f" height="10" width="10" x="55" y="53"></rect><rect fill="#4edea3" fill-opacity="0.3" height="10" width="10" x="55" y="65"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="55" y="77"></rect>
+</g>
+<g transform="translate(285, 0)">
+<rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="10" y="5"></rect><rect fill="#4edea3" height="10" width="10" x="10" y="17"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="10" y="29"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="10" y="41"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="10" y="53"></rect><rect fill="#2e353f" height="10" width="10" x="10" y="65"></rect><rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="10" y="77"></rect>
+<rect fill="#2e353f" height="10" width="10" x="25" y="5"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="25" y="17"></rect><rect fill="#4edea3" height="10" width="10" x="25" y="29"></rect><rect fill="#4edea3" fill-opacity="0.3" height="10" width="10" x="25" y="41"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="25" y="53"></rect><rect fill="#2e353f" height="10" width="10" x="25" y="65"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="25" y="77"></rect>
+<rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="40" y="5"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="40" y="17"></rect><rect fill="#4edea3" height="10" width="10" x="40" y="29"></rect><rect fill="#2e353f" height="10" width="10" x="40" y="41"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="40" y="53"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="40" y="65"></rect><rect fill="#4edea3" fill-opacity="0.3" height="10" width="10" x="40" y="77"></rect>
+<rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="55" y="5"></rect><rect fill="#2e353f" height="10" width="10" x="55" y="17"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="55" y="29"></rect><rect fill="#4edea3" height="10" width="10" x="55" y="41"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="55" y="53"></rect><rect fill="#2e353f" height="10" width="10" x="55" y="65"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="55" y="77"></rect>
+</g>
+<g transform="translate(360, 0)">
+<rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="10" y="5"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="10" y="17"></rect><rect fill="#4edea3" height="10" width="10" x="10" y="29"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="10" y="41"></rect><rect fill="#2e353f" height="10" width="10" x="10" y="53"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="10" y="65"></rect><rect fill="#4edea3" fill-opacity="0.3" height="10" width="10" x="10" y="77"></rect>
+<rect fill="#4edea3" height="10" width="10" x="25" y="5"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="25" y="17"></rect><rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="25" y="29"></rect><rect fill="#2e353f" height="10" width="10" x="25" y="41"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="25" y="53"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="25" y="65"></rect><rect fill="#2e353f" height="10" width="10" x="25" y="77"></rect>
+<rect fill="#2e353f" height="10" width="10" x="40" y="5"></rect><rect fill="#4edea3" fill-opacity="0.6" height="10" width="10" x="40" y="17"></rect><rect fill="#4edea3" height="10" width="10" x="40" y="29"></rect><rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="40" y="41"></rect><rect fill="#4edea3" fill-opacity="0.4" height="10" width="10" x="40" y="53"></rect><rect fill="#2e353f" height="10" width="10" x="40" y="65"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="40" y="77"></rect>
+<rect fill="#4edea3" fill-opacity="0.8" height="10" width="10" x="55" y="5"></rect><rect fill="#4edea3" fill-opacity="0.9" height="10" width="10" x="55" y="17"></rect><rect fill="#2e353f" height="10" width="10" x="55" y="29"></rect><rect fill="#4edea3" fill-opacity="0.5" height="10" width="10" x="55" y="41"></rect><rect fill="#4edea3" height="10" width="10" x="55" y="53"></rect><rect fill="#4edea3" fill-opacity="0.7" height="10" width="10" x="55" y="65"></rect><rect fill="#2e353f" height="10" width="10" x="55" y="77"></rect>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<!-- Recent Commit Log Stream -->
+<div class="pt-space-xs flex flex-col gap-1">
+<span class="font-label-micro text-label-micro text-outline">RECENT GIT LOG (HEAD -&gt; main):</span>
+<div class="flex items-center gap-space-sm text-body-sm text-on-surface-variant font-label-code text-label-code">
+<span class="text-primary font-bold">fa48b02</span>
+<span>feat(cv): optimize tensorRT inference on jetson edge device</span>
+<span class="text-outline ml-auto hidden sm:inline">2h ago</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm text-on-surface-variant font-label-code text-label-code">
+<span class="text-secondary font-bold">3c11df9</span>
+<span>fix(api): handle geofence boundary floating point precision</span>
+<span class="text-outline ml-auto hidden sm:inline">14h ago</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm text-on-surface-variant font-label-code text-label-code">
+<span class="text-tertiary font-bold">88a2e1d</span>
+<span>perf(db): add composite index to attendance log timestamp</span>
+<span class="text-outline ml-auto hidden sm:inline">1d ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: CONTACT SECTION (07 // CONTACT) -->
+<section class="w-full bg-surface-container-lowest/90 py-space-2xl" id="contact">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs pb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary">[ 07 // DISPATCH_CONSOLE ]</span>
+<span class="h-px bg-surface-container flex-1"></span>
+<span class="font-label-micro text-label-micro text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-primary status-pulse"></span> PORT OPEN
+            </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">LET'S BUILD SOMETHING USEFUL</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Interested in software engineering collaboration, computer vision research, full-stack applications, or technology consulting? Drop a line to initialize transmission.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Quick Channels & Details (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md">
+<span class="font-label-code text-label-code text-secondary uppercase">// DIRECT_CHANNELS</span>
+<!-- Channel Links -->
+<a class="p-space-sm bg-surface-container hover:bg-surface-variant transition-all flex items-center justify-between group" href="mailto:zhidan@example.com">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">alternate_email</span>
+<div class="flex flex-col">
+<span class="font-label-micro text-label-micro text-outline">PRIMARY EMAIL</span>
+<span class="font-label-code text-label-code text-on-surface group-hover:text-primary transition-colors">zhidan@example.com</span>
+</div>
+</div>
+<span class="font-label-micro text-label-micro text-outline">[ SEND ↗ ]</span>
+</a>
+<a class="p-space-sm bg-surface-container hover:bg-surface-variant transition-all flex items-center justify-between group" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">code</span>
+<div class="flex flex-col">
+<span class="font-label-micro text-label-micro text-outline">CODE REPOSITORY</span>
+<span class="font-label-code text-label-code text-on-surface group-hover:text-secondary transition-colors">github.com/zhidan-dev</span>
+</div>
+</div>
+<span class="font-label-micro text-label-micro text-outline">[ FOLLOW ↗ ]</span>
+</a>
+<a class="p-space-sm bg-surface-container hover:bg-surface-variant transition-all flex items-center justify-between group" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">badge</span>
+<div class="flex flex-col">
+<span class="font-label-micro text-label-micro text-outline">PROFESSIONAL NETWORK</span>
+<span class="font-label-code text-label-code text-on-surface group-hover:text-tertiary transition-colors">linkedin.com/in/zhidan</span>
+</div>
+</div>
+<span class="font-label-micro text-label-micro text-outline">[ CONNECT ↗ ]</span>
+</a>
+<a class="p-space-sm bg-surface-container hover:bg-surface-variant transition-all flex items-center justify-between group" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">photo_camera</span>
+<div class="flex flex-col">
+<span class="font-label-micro text-label-micro text-outline">DEVELOPER DISPATCH</span>
+<span class="font-label-code text-label-code text-on-surface group-hover:text-primary transition-colors">@zhidan.dev</span>
+</div>
+</div>
+<span class="font-label-micro text-label-micro text-outline">[ VISIT ↗ ]</span>
+</a>
+</div>
+<!-- Server Telemetry Status Card -->
+<div class="p-space-md bg-surface-container-low shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 bg-primary status-pulse"></span>
+<span class="font-label-code text-label-code text-on-surface">PGP ENCRYPTED // VERIFIED</span>
+</div>
+<span class="font-label-micro text-label-micro text-outline">KEY: 0x98AE4C</span>
+</div>
+</div>
+<!-- Right Column: Terminal Message Form (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container p-space-lg shadow-xl">
+<!-- Form Header -->
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-high px-space-sm py-1.5">
+<span class="font-label-code text-label-code text-primary font-bold">&gt; TRANSMIT_MESSAGE.SH</span>
+<span class="font-label-micro text-label-micro text-outline">BUFFER: 0 / 1024 B</span>
+</div>
+<form class="flex flex-col gap-space-md" id="contact-form" onsubmit="event.preventDefault(); const btn = document.getElementById('submit-btn'); btn.innerText='&gt; TRANSMITTING...'; setTimeout(()=&gt;{ btn.innerText='&gt; TRANSMISSION_SUCCESSFUL [200 OK]'; btn.classList.replace('bg-primary','bg-secondary'); }, 900);">
+<!-- Input: Sender Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-micro text-label-micro text-on-surface-variant uppercase" for="sender-name">
+                  &gt; IDENTIFIER // SENDER_NAME:
+                </label>
+<div class="flex items-center bg-surface-container-lowest px-space-sm py-2">
+<span class="font-label-code text-label-code text-primary mr-2">$</span>
+<input class="w-full bg-transparent font-label-code text-label-code text-on-surface placeholder:text-outline focus:outline-none" id="sender-name" placeholder="e.g. Alex Hunter" required="" type="text"/>
+</div>
+</div>
+<!-- Input: Sender Email -->
+<div class="flex flex-col gap-1">
+<label class="font-label-micro text-label-micro text-on-surface-variant uppercase" for="sender-email">
+                  &gt; ROUTING // SENDER_EMAIL:
+                </label>
+<div class="flex items-center bg-surface-container-lowest px-space-sm py-2">
+<span class="font-label-code text-label-code text-secondary mr-2">$</span>
+<input class="w-full bg-transparent font-label-code text-label-code text-on-surface placeholder:text-outline focus:outline-none" id="sender-email" placeholder="name@domain.com" required="" type="email"/>
+</div>
+</div>
+<!-- Input: Subject Selection -->
+<div class="flex flex-col gap-1">
+<label class="font-label-micro text-label-micro text-on-surface-variant uppercase" for="subject-select">
+                  &gt; PROTOCOL // SUBJECT_INTENT:
+                </label>
+<div class="flex items-center bg-surface-container-lowest px-space-sm py-2">
+<span class="font-label-code text-label-code text-tertiary mr-2">$</span>
+<select class="w-full bg-transparent font-label-code text-label-code text-on-surface focus:outline-none" id="subject-select">
+<option class="bg-surface-container-low text-on-surface" value="project">Project Inquiry / Contract</option>
+<option class="bg-surface-container-low text-on-surface" value="internship">Internship / Job Opportunity</option>
+<option class="bg-surface-container-low text-on-surface" value="research">Computer Vision / AI Research</option>
+<option class="bg-surface-container-low text-on-surface" value="other">General Dev Discussion</option>
+</select>
+</div>
+</div>
+<!-- Textarea: Message Payload -->
+<div class="flex flex-col gap-1">
+<label class="font-label-micro text-label-micro text-on-surface-variant uppercase" for="message-body">
+                  &gt; PAYLOAD // MESSAGE_BUFFER:
+                </label>
+<div class="flex flex-col bg-surface-container-lowest px-space-sm py-2">
+<div class="flex items-start">
+<span class="font-label-code text-label-code text-primary mr-2">&gt;</span>
+<textarea class="w-full bg-transparent font-label-code text-label-code text-on-surface placeholder:text-outline focus:outline-none resize-none" id="message-body" placeholder="Type your mission brief or query here..." required="" rows="4"></textarea>
+</div>
+</div>
+</div>
+<!-- Submit Execution Button -->
+<button class="w-full py-space-sm bg-primary text-on-primary font-label-code text-label-code font-bold uppercase tracking-wider hover:bg-surface-tint hover:shadow-lg transition-all flex items-center justify-center gap-2" id="submit-btn" type="submit">
+<span>&gt; DISPATCH MESSAGE →</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/40 pt-space-xl pb-space-lg"><div class="max-w-[1200px] mx-auto px-margin"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-lg border-b border-outline-variant/30"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">ZHIDAN<span class="text-primary">.DEV</span></span><span class="font-label-micro text-label-micro text-on-surface-variant px-1.5 py-0.5 border border-outline-variant bg-surface-container-low">LOC: 0x4F</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Designed &amp; built with curiosity, code, and caffeine.</p></div><div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container border border-outline-variant/60 rounded"><span class="w-2 h-2 rounded-none bg-primary status-pulse"></span><span class="font-label-micro text-label-micro text-on-surface uppercase">SYSTEM STATUS: ONLINE</span></div><div class="font-label-code text-label-code text-on-surface-variant">v2.6.4-prod</div></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md"><div class="font-label-micro text-label-micro text-outline">© 2026 Zhidan. All rights reserved.</div><div class="font-label-micro text-label-micro text-outline-variant hover:text-on-surface-variant transition-colors cursor-default select-none">press ↑ ↑ ↓ ↓ ← → ← → for developer mode</div></div></div></footer></body></html>

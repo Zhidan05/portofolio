@@ -12,7 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "stitch-reference/**",
+    ".helsinki-checks/**",
   ]),
 ]);
 
 export default eslintConfig;
+
