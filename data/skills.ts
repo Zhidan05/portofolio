@@ -29,7 +29,7 @@ export const skills = [
     title: "Databases",
     icon: "▤",
     accent: "violet",
-    items: ["MySQL", "PostgreSQL", "Oracle SQL", "Redis"],
+    items: ["MySQL", "Oracle SQL", "MariaDB"],
   },
   {
     title: "DevOps & Tooling",

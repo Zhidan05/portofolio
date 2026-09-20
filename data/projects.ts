@@ -37,7 +37,7 @@ export const projects: Project[] = [
   },
   {
     id: "03",
-    title: "SIMBA — Internship Management System",
+    title: "SIMBA — Sistem Informasi Magang Berbasis Aplikasi",
     category: "Full Stack Web",
     description:
       "A full-stack internship management system that brings internship administration and its supporting workflows into one web application.",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   },
   {
     id: "04",
-    title: "InnoElectrica",
+    title: "InnoElectrica Expo 2026",
     category: "Modern Event Platform",
     description:
       "An interactive event website and platform, bringing event information to life through a modern interface and considered motion.",

@@ -19,8 +19,8 @@ export const experience = [
   {
     organization: "IEEE Student Branch Universitas Riau",
     role: "Information & Creative Media Division",
-    dates: "2025 — 2026",
-    status: "COMPLETED",
+    dates: "2026 // PRESENT",
+    status: "DORMANT",
     accent: "cyan",
     description:
       "Digital systems, developer workshops, and visual communications for academic and research events.",
@@ -31,13 +31,13 @@ export const experience = [
     ],
   },
   {
-    organization: "HIMATRO FT Universitas Riau",
-    role: "Communication & Information Bureau",
-    dates: "2024 — 2025",
-    status: "ARCHIVED",
+    organization: "Universitas Riau // UPA TIK",
+    role: "IT & Web Designer",
+    dates: "2025",
+    status: "COMPLETED",
     accent: "violet",
     description:
-      "Student web portal maintenance, information distribution, and digital resources for academic and competition activities.",
+      "System maintenance and web design for the university's information technology department.",
     technologies: [
       "Web Portal Operations",
       "Information Logistics",
