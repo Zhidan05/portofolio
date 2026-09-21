@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { initialAbout } from '../data/about.ts';
+import { validAbout } from '../lib/aboutValidation.ts';
+const data=structuredClone(initialAbout);
+for(const key of ['interests','tools','focus'])data[key].forEach(item=>item.id=crypto.randomUUID());
+assert.equal(validAbout(data),true);
+for(const invalid of [null,{},[],{...data,profile:null},{...data,revision:'invalid'}, {...data,tools:Array(31).fill(data.tools[0])}])assert.equal(validAbout(invalid),false);
+const duplicate=structuredClone(data);duplicate.tools.push(duplicate.tools[0]);assert.equal(validAbout(duplicate),false);
+const blank=structuredClone(data);blank.profile.name='   ';assert.equal(validAbout(blank),false);
+const tooLong=structuredClone(data);tooLong.profile.directive='x'.repeat(2001);assert.equal(validAbout(tooLong),false);
+const missingCode=structuredClone(data);delete missingCode.focus[0].code;assert.equal(validAbout(missingCode),false);
+const badId=structuredClone(data);badId.tools[0].id='not-a-uuid';assert.equal(validAbout(badId),false);
+const optional=structuredClone(data);optional.profile.bio_paragraph_2='';optional.profile.bio_paragraph_3='';optional.profile.bio_highlight='';optional.tools=[];assert.equal(validAbout(optional),true);
+console.log('PASS: server action input validation, required/optional fields, length limits, UUIDs, unique IDs, focus codes, list limits, revisions.');

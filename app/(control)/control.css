@@ -1,0 +1,30 @@
+.control { min-height: 100vh; padding: 32px clamp(16px, 4vw, 64px); overflow-wrap: anywhere; }
+.control h1 { font-size: clamp(22px, 3vw, 34px); margin: 16px 0; }
+.control .panel > p { margin-block: 16px; }
+.control .panel > .pixel-button { margin-top: 12px; }
+.control-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+.control-grid { display: grid; gap: 24px; margin-top: 24px; }
+.control-content, .control-form, .control-fields, .form-grid, .editor-row, .editor-inputs, .control-form label { min-width: 0; }
+.control-nav { display: flex; flex-wrap: wrap; gap: 8px; align-content: start; font-family: var(--font-jetbrains), monospace; font-size: 12px; }
+.control-nav a { padding: 12px; border: 1px solid var(--border); }
+.control-nav a[aria-current] { color: var(--primary); border-color: var(--primary); background: var(--surface-low); }
+.control-form, .form-grid, .editor-list, .editor-inputs { display: grid; gap: 20px; }
+.control-form label { display: grid; gap: 8px; font: 12px var(--font-jetbrains), monospace; color: var(--body-text); }
+.control-form input, .control-form textarea { display: block; width: 100%; min-width: 0; padding: 12px; background: var(--surface-lowest); color: var(--foreground); border: 1px solid var(--border); border-radius: 0; line-height: 1.6; }
+.control-form textarea { resize: vertical; }
+.control-fields { margin: 0; width: 100%; }
+.control-fields legend { padding-inline: 8px; max-width: 100%; }
+.editor-row { padding-block: 12px; border-bottom: 1px solid var(--border); }
+.editor-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.editor-actions button { min-height: 44px; padding: 8px 12px; background: var(--surface); color: var(--secondary); border: 1px solid var(--border); font: 11px var(--font-jetbrains), monospace; }
+.control-fields > .pixel-button { margin-top: 20px; }
+.control button:disabled { cursor: not-allowed; }
+.save-panel { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.login { display: grid; place-items: center; }
+.login-panel { width: 100%; max-width: 480px; border-top: 2px solid var(--primary); box-shadow: 6px 6px 0 #4edea31a; }
+@media (min-width: 768px) { .form-grid, .editor-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } .full-width { grid-column: 1 / -1; } }
+@media (min-width: 1024px) { .control-grid { grid-template-columns: 190px minmax(0, 1fr); } .control-nav { flex-direction: column; } }
+
+.system-status { display: grid; gap: 12px; margin-block: 24px; }
+.system-status > div { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; border-bottom: 1px solid var(--border); padding: 12px 0; }
+.system-status dd { margin: 0; }
