@@ -12,6 +12,10 @@ export default async function Dashboard() {
     </dl>
     <p>Edit the published player profile, biography, directive, interests, tools, and focus cards.</p>
     <Link className="pixel-button" href="/admin/about">EDIT ABOUT →</Link>
-    <p className="micro muted">PROJECTS / EXPERIENCE / TECH STACK — NOT CONFIGURED</p>
+    <div style={{ marginTop: "1rem" }}>
+      <p>Manage the published projects.</p>
+      <Link className="pixel-button" href="/admin/projects">EDIT PROJECTS →</Link>
+    </div>
+    <p className="micro muted" style={{ marginTop: "1rem" }}>EXPERIENCE / TECH STACK — NOT CONFIGURED</p>
   </section>;
 }

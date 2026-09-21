@@ -43,6 +43,19 @@ Changes to sample content are intentional: fabricated performance counters, expe
 - Connect GitHub activity to verified data if desired; never substitute random heatmap values or sample commits.
 - Implement a server-side contact endpoint and update `lib/contact.ts`. Only show successful delivery after backend confirmation; keep provider secrets on the server. No provider has been installed.
 
+## PROJECT MANAGEMENT
+
+The Projects section is powered dynamically by Supabase.
+
+1. **Migration**: Run the `supabase/migrations/202609210002_projects.sql` migration in the Supabase SQL Editor. This sets up the `portfolio_projects` and `portfolio_project_technologies` tables, RLS policies, seeds initial data, and creates the `portfolio-projects` Storage bucket.
+2. **Access**: Only users listed in the `portfolio_admins` table have CRUD permissions. They can manage projects at `/admin/projects`.
+3. **Features**:
+   - Create, edit, delete, and reorder projects.
+   - Manage project status (`draft`, `published`, `archived`) and featured status. Only `published` and `featured` projects appear on the public homepage.
+   - Attach repository and demo URLs.
+   - Upload cover images (stored in the `portfolio-projects` public bucket).
+4. **Caching**: Public project data is cached with the `portfolio-projects` tag. Admin actions trigger `updateTag` to instantly invalidate the cache and serve fresh data.
+
 ## Validation
 
 See `VALIDATION.md` for the implementation audit and verified checks. Supabase Auth and PostgreSQL power the admin editor. Run `npm run test:database` for local migration, RLS, CRUD, conflict, and rollback checks (PGlite; no credentials required).
