@@ -1,0 +1,42 @@
+import type { HomeData } from "@/lib/home";
+
+export const initialHome: HomeData = {
+  profile: {
+    system_location_code: "0x00_INIT",
+    system_status_text: "BOOT_SEQ_COMPLETE",
+    region_primary: "INDONESIA [ID]",
+    region_secondary: "SUMATERA",
+    greeting: "> HELLO WORLD",
+    description: "Informatics Engineering student focused on software development, computer vision, web applications, and practical technology solutions calibrated for real-world reliability.",
+    primary_cta_label: "> RUN_PROJECTS ↓",
+    primary_cta_url: "#projects",
+    secondary_cta_label: "[ GET IN TOUCH ↗ ]",
+    secondary_cta_url: "#contact",
+    cv_cta_label: "[ DOWNLOAD CV ↓ ]",
+    cv_url: "",
+    cv_enabled: false,
+    workspace_terminal_user: "zhidan@battlestation",
+    workspace_terminal_path: "~/workspace",
+    workspace_label: "WORKSPACE_INTERFACE",
+    workspace_status: "READY",
+    project_focus_label: "PROJECT FOCUS:",
+    project_focus_value: "Computer Vision",
+    workspace_motto: "BUILD. LEARN. ITERATE.",
+    workspace_mode: "[ DEV_MODE ]",
+  },
+  segments: [
+    { id: "f2d1e05a-a4d3-4859-96ec-2178385d3cb1", line_number: 1, text: "Hi, I'm ", accent: "default", custom_color: null, sort_order: 0 },
+    { id: "b3a4a90b-8d2b-4573-9a74-d4cfd9e87900", line_number: 1, text: "Zhidan", accent: "primary", custom_color: null, sort_order: 1 },
+    { id: "2c8c49e7-49f3-4df4-ae53-294b4ea01389", line_number: 1, text: ". I build software, ", accent: "default", custom_color: null, sort_order: 2 },
+    { id: "6de3ab39-509b-43e4-8a47-a87fdbd5f49b", line_number: 1, text: "AI systems", accent: "secondary", custom_color: null, sort_order: 3 },
+    { id: "98be0804-d4db-4b48-84dc-6d80d2919d67", line_number: 1, text: ", and ", accent: "default", custom_color: null, sort_order: 4 },
+    { id: "88a4db95-aeb1-4cf4-921c-d78edffb14e9", line_number: 1, text: "digital experiences", accent: "tertiary", custom_color: null, sort_order: 5 },
+    { id: "6f937e19-0940-410f-8700-1c390234cfeb", line_number: 1, text: ".", accent: "default", custom_color: null, sort_order: 6 },
+  ],
+  info_cards: [
+    { id: "i1", label: "ROLE", value: "Software Dev", accent: "default", sort_order: 0 },
+    { id: "i2", label: "FOCUS", value: "Web / CV / Edge AI", accent: "secondary", sort_order: 1 },
+    { id: "i3", label: "LOCATION", value: "Indonesia [ID]", accent: "primary", sort_order: 2 },
+  ],
+  revision: null,
+};

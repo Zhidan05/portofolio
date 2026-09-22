@@ -1,4 +1,5 @@
 import type { AboutData, Profile } from "@/lib/about";
+import type { HomeData } from "@/lib/home";
 
 export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[];
 type Table<Row, Insert = Partial<Row>> = {
@@ -22,6 +23,8 @@ export type Database = {
     Functions: {
       read_about: { Args: Record<string, never>; Returns: AboutData | null };
       save_about: { Args: { content: AboutData; expected_revision: string | null }; Returns: string };
+      read_home: { Args: Record<string, never>; Returns: HomeData | null };
+      save_home: { Args: { content: HomeData; expected_revision: string | null }; Returns: string };
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;

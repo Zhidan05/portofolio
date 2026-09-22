@@ -45,7 +45,26 @@ Changes to sample content are intentional: fabricated performance counters, expe
 
 ## PROJECT MANAGEMENT
 
-The Projects section is powered dynamically by Supabase.
+## PROJECT MANAGEMENT
+
+The Projects and Home sections are powered dynamically by Supabase.
+
+### HOME CONTENT MANAGEMENT
+
+The public homepage Hero section is manageable via `/admin/home`.
+Editable areas include:
+- **Hero Metadata**: System location code, status text, primary and secondary region.
+- **Headline**: The main `<h1>` consists of dynamic segments with custom accent styling (`primary`, `secondary`, `tertiary`, `default`).
+- **Description**: The main biographical paragraph.
+- **CTA**: Primary and secondary buttons, plus CV download link toggle.
+- **Info Cards**: The status cards at the bottom (Role, Focus, Location).
+- **Workspace Status**: Terminal metadata, project focus, and mode in the workspace panel illustration.
+
+1. **Migration**: Run the `supabase/migrations/202609220001_home_admin.sql` migration to create the singleton tables, RLS policies, and atomic save RPCs.
+2. **Access**: Only users in `portfolio_admins` can manage Home content.
+3. **Caching**: Fetched via server-side RPC and cached with the `portfolio-home` tag. Admin actions instantly invalidate this cache for immediate updates.
+
+### PROJECTS CONTENT MANAGEMENT
 
 1. **Migration**: Run the `supabase/migrations/202609210002_projects.sql` migration in the Supabase SQL Editor. This sets up the `portfolio_projects` and `portfolio_project_technologies` tables, RLS policies, seeds initial data, and creates the `portfolio-projects` Storage bucket.
 2. **Access**: Only users listed in the `portfolio_admins` table have CRUD permissions. They can manage projects at `/admin/projects`.

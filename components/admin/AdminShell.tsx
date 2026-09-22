@@ -17,6 +17,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
     <p role="status" className="code cyan">{error}</p>
     <div className="control-grid"><nav className="control-nav" aria-label="Admin navigation">
       <Link href="/admin" aria-current={path === "/admin" ? "page" : undefined}>Dashboard</Link>
+      <Link href="/admin/home" aria-current={path === "/admin/home" ? "page" : undefined}>Home</Link>
       <Link href="/admin/about" aria-current={path === "/admin/about" ? "page" : undefined}>About</Link>
       <Link href="/admin/projects" aria-current={path === "/admin/projects" ? "page" : undefined}>Projects</Link>
       <Link href="/" target="_blank" rel="noopener noreferrer">View portfolio ↗</Link>
