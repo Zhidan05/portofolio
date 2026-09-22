@@ -18,6 +18,30 @@ export type Database = {
       about_interests: Table<ListRow>;
       about_tools: Table<ListRow>;
       about_focus: Table<ListRow & { code: string }>;
+      portfolio_experiences: Table<{
+        id: string;
+        organization: string;
+        role: string;
+        description: string;
+        start_label: string;
+        end_label: string | null;
+        status: "active" | "inactive" | "completed";
+        status_label: string;
+        accent: "primary" | "secondary" | "tertiary" | "custom";
+        custom_accent_color: string | null;
+        is_current: boolean;
+        sort_order: number;
+        published: boolean;
+        created_at: string;
+        updated_at: string;
+      }>;
+      portfolio_experience_tags: Table<{
+        id: string;
+        experience_id: string;
+        label: string;
+        sort_order: number;
+        created_at: string;
+      }>;
     };
     Views: Record<string, never>;
     Functions: {
@@ -25,6 +49,8 @@ export type Database = {
       save_about: { Args: { content: AboutData; expected_revision: string | null }; Returns: string };
       read_home: { Args: Record<string, never>; Returns: HomeData | null };
       save_home: { Args: { content: HomeData; expected_revision: string | null }; Returns: string };
+      save_experience: { Args: { exp_json: any; tags_json: any }; Returns: string };
+      reorder_experiences: { Args: { exp_ids: string[] }; Returns: void };
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;
