@@ -3,7 +3,7 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { updateTag, revalidatePath } from "next/cache";
 import { validExperience } from "@/lib/experienceValidation";
-import type { ExperienceRecord } from "@/lib/experience";
+import type { ExperienceRecord, ExperienceTag } from "@/lib/experience";
 
 export async function readAllExperiences(): Promise<ExperienceRecord[]> {
   const supabase = await createSupabaseServerClient();
@@ -18,7 +18,7 @@ export async function readAllExperiences(): Promise<ExperienceRecord[]> {
     const e = exp as Record<string, unknown>;
     return {
       ...e,
-      tags: ((e.tags as any[]) || []).sort((a, b) => a.sort_order - b.sort_order),
+      tags: ((e.tags as ExperienceTag[]) || []).sort((a, b) => a.sort_order - b.sort_order),
     };
   }) as unknown as ExperienceRecord[];
 }
@@ -39,7 +39,7 @@ export async function readExperience(id: string): Promise<ExperienceRecord | nul
   const exp = data as Record<string, unknown>;
   return {
     ...exp,
-    tags: ((exp.tags as any[]) || []).sort((a, b) => a.sort_order - b.sort_order),
+    tags: ((exp.tags as ExperienceTag[]) || []).sort((a, b) => a.sort_order - b.sort_order),
   } as unknown as ExperienceRecord;
 }
 

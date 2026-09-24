@@ -21,6 +21,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
       <Link href="/admin/about" aria-current={path === "/admin/about" ? "page" : undefined}>About</Link>
       <Link href="/admin/projects" aria-current={path.startsWith("/admin/projects") ? "page" : undefined}>Projects</Link>
       <Link href="/admin/experience" aria-current={path.startsWith("/admin/experience") ? "page" : undefined}>Experience</Link>
+      <Link href="/admin/contact" aria-current={path.startsWith("/admin/contact") ? "page" : undefined}>Contact</Link>
       <Link href="/" target="_blank" rel="noopener noreferrer">View portfolio ↗</Link>
     </nav><div className="control-content">{children}</div></div></main>;
 }

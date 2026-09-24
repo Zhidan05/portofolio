@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:database": "node tests/database.test.mjs && node tests/projects-database.test.mjs && node tests/home-database.test.mjs",
-    "test:validation": "node --experimental-strip-types tests/about-validation.test.mjs && node --experimental-strip-types tests/home-validation.test.mjs"
+    "test:database": "node tests/database.test.mjs && node tests/projects-database.test.mjs && node tests/home-database.test.mjs && node tests/contact-database.test.mjs",
+    "test:validation": "node --experimental-strip-types tests/about-validation.test.mjs && node --experimental-strip-types tests/home-validation.test.mjs && node --experimental-strip-types tests/contact-validation.test.mjs",
+    "test:contact": "node --experimental-strip-types tests/contact-validation.test.mjs && node tests/contact-database.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

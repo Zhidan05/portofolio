@@ -1,52 +1,37 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ContactForm } from "@/components/ui/ContactForm";
-import { profile } from "@/data/profile";
-export function Contact() {
-  const channels = [
-    {
-      label: "PRIMARY EMAIL",
-      icon: "@",
-      value: profile.email,
-      href: profile.email ? `mailto:${profile.email}` : null,
-    },
-    {
-      label: "CODE REPOSITORY",
-      icon: "</>",
-      value: profile.github,
-      href: profile.github,
-    },
-    {
-      label: "PROFESSIONAL NETWORK",
-      icon: "in",
-      value: profile.linkedin,
-      href: profile.linkedin,
-    },
-    {
-      label: "DEVELOPER DISPATCH",
-      icon: "◎",
-      value: profile.instagram,
-      href: profile.instagram,
-    },
-  ];
+import { readPublicContact } from "@/services/publicContactService";
+
+const icons: Record<string, string> = { email: "@", github: "</>", linkedin: "in", instagram: "◎", website: "//" };
+function sectionParts(label: string) {
+  const match = label.match(/^\s*(\d+)\s*\/\/\s*(.+)$/);
+  return match ? { index: match[1], label: match[2] } : { index: "07", label };
+}
+
+export async function Contact() {
+  const contact = await readPublicContact();
+  const section = sectionParts(contact.settings.section_label);
   return (
     <section id="contact" className="section section-dark">
       <div className="container">
         <SectionHeader
-          index="07"
-          label="DISPATCH_CONSOLE"
-          title="Let's build something useful"
+          index={section.index}
+          label={section.label}
+          title={contact.settings.heading}
           meta="LET'S CONNECT"
-          description="Interested in software engineering collaboration, computer vision research, or full-stack applications? Let's turn a useful idea into something real."
+          description={contact.settings.description}
         />
         <div className="contact-grid">
           <div>
             <div className="panel direct-channels">
-              <h3 className="code cyan">{"// DIRECT_CHANNELS"}</h3>
-              {channels.map((channel) => {
+              <h3 className="code cyan">{`// ${contact.settings.channels_heading}`}</h3>
+              {contact.channels.map((channel) => {
+                const href = channel.status === "active" ? channel.url : null;
+                const external = Boolean(href?.startsWith("http://") || href?.startsWith("https://"));
                 const content = (
                   <>
-                    <span className="channel-icon" aria-hidden="true">
-                      {channel.icon}
+                    <span className="channel-icon" aria-hidden="true" style={{ color: channel.accent.startsWith("#") ? channel.accent : `var(--${channel.accent})` }}>
+                      {icons[channel.type] || "◇"}
                     </span>
                     <span>
                       <span className="micro muted">{channel.label}</span>
@@ -55,31 +40,34 @@ export function Contact() {
                       </span>
                     </span>
                     <span className="micro muted">
-                      {channel.href ? "[ ↗ ]" : "[ PENDING ]"}
+                      {href ? "[ ↗ ]" : `[ ${channel.status_label || "PENDING"} ]`}
                     </span>
                   </>
                 );
-                return channel.href ? (
+                return href ? (
                   <a
                     className="channel"
-                    href={channel.href}
-                    key={channel.label}
+                    href={href}
+                    key={channel.id}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    aria-label={`${channel.label}: ${channel.value || "open channel"}`}
                   >
                     {content}
                   </a>
                 ) : (
-                  <div className="channel" key={channel.label}>
+                  <div className="channel" key={channel.id}>
                     {content}
                   </div>
                 );
               })}
             </div>
-            <div className="contact-note micro">
-              <span className="cyan">[ CHANNELS PENDING ]</span>
-              <p>Verified contact details will be published here.</p>
-            </div>
+            {(contact.settings.channels_footer_title || contact.settings.channels_footer_text) && <div className="contact-note micro">
+              {contact.settings.channels_footer_title && <span className="cyan">[ {contact.settings.channels_footer_title} ]</span>}
+              {contact.settings.channels_footer_text && <p>{contact.settings.channels_footer_text}</p>}
+            </div>}
           </div>
-          <ContactForm />
+          <ContactForm settings={contact.settings} subjects={contact.subjects} submissionAvailable={contact.submissionAvailable} />
         </div>
       </div>
     </section>

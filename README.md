@@ -23,7 +23,7 @@ Open http://localhost:3000. The public page is prerendered with server-fetched A
 - `components/sections/`: Hero, About, Projects, Experience, Skills, CurrentActivity, GithubActivity, and Contact.
 - `components/ui/`: reusable headers, cards, badges, buttons, and the stateful contact form.
 - `data/`: projects, experience, skills, learning activities, navigation, and contact destinations.
-- `lib/contact.ts`: isolated submission adapter. It deliberately reports that no message was sent until a real backend is connected.
+- `lib/contact.ts` and `lib/contactValidation.ts`: Contact content, channel, subject, inbox, and submission types plus shared validation.
 - `public/assets/`: locally hosted Stitch workspace illustration and Zhidan monogram.
 - `app/fonts/`: Latin WOFF2 versions of Inter, Space Mono, and JetBrains Mono, with their SIL Open Font Licenses. The Inter and JetBrains files contain variable weights. Builds and page loads require no font CDN.
 
@@ -41,7 +41,7 @@ Changes to sample content are intentional: fabricated performance counters, expe
 - Add verified email, GitHub, LinkedIn, Instagram, and CV destinations to `data/profile.ts`.
 - Review employment dates, organizations, roles, skill list, and current learning topics transcribed from the generated reference before publication.
 - Connect GitHub activity to verified data if desired; never substitute random heatmap values or sample commits.
-- Implement a server-side contact endpoint and update `lib/contact.ts`. Only show successful delivery after backend confirmation; keep provider secrets on the server. No provider has been installed.
+- Apply the Contact migration before enabling live submissions. Email notifications are intentionally not connected yet; successful dispatch means the message is stored in the protected admin inbox.
 
 ## PROJECT MANAGEMENT
 
@@ -74,6 +74,21 @@ Editable areas include:
    - Attach repository and demo URLs.
    - Upload cover images (stored in the `portfolio-projects` public bucket).
 4. **Caching**: Public project data is cached with the `portfolio-projects` tag. Admin actions trigger `updateTag` to instantly invalidate the cache and serve fresh data.
+
+### CONTACT CONTENT MANAGEMENT
+
+The public Contact section and secure inbox are managed at `/admin/contact` through four tabs:
+
+- **Content** edits the section copy, form labels, footer note, and message-length limit.
+- **Channels** adds, edits, reorders, hides, and removes direct contact destinations. Public links accept only `http:`/`https:`; email links are generated from validated addresses.
+- **Subjects** manages the enabled, ordered subject-intent options shown by the public form.
+- **Inbox** lists fresh messages, filters by New/Read/Archived, marks opened messages read, archives without deleting, and offers a local `mailto:` reply link.
+
+Apply `supabase/migrations/202609240001_contact.sql` in **Supabase → SQL Editor** after the earlier migrations. It creates the Contact settings, channels, subjects, and messages tables; explicit grants and RLS policies; public-read and controlled-submission functions; seeds the existing public copy; and adds database-backed per-email throttling. Anonymous clients cannot select or write the inbox directly. The public form also applies server-side validation, an invisible honeypot, and minimum submission timing.
+
+Public Contact configuration is cached for 60 seconds with the `portfolio-contact` tag and invalidated immediately by admin changes. Inbox data is never placed in that public cache. If Supabase or the migration is unavailable, the existing static Contact design remains visible and submission is explicitly disabled.
+
+Email delivery and admin email notifications are **not connected**. A successful dispatch only means the message was securely stored in Supabase and is visible in the Contact inbox.
 
 ## Validation
 

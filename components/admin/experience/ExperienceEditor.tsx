@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { saveExperience } from "@/services/experienceService";
-import type { ExperienceRecord, ExperienceAccent } from "@/lib/experience";
+import type { ExperienceRecord, ExperienceAccent, ExperienceStatus } from "@/lib/experience";
 import { ExperienceCardView } from "@/components/sections/ExperienceCard";
 
 const COLOR_PRESETS: { label: string; accent: ExperienceAccent; hex?: string }[] = [
@@ -112,7 +112,7 @@ export function ExperienceEditor({ initialData }: { initialData?: ExperienceReco
               <div className="form-grid compact">
                 <label>
                   <span>Semantic Status</span>
-                  <select value={draft.status} onChange={e => update({ status: e.target.value as any })}>
+                  <select value={draft.status} onChange={e => update({ status: e.target.value as ExperienceStatus })}>
                     <option value="active">Active</option>
                     <option value="inactive">Inactive</option>
                     <option value="completed">Completed</option>
