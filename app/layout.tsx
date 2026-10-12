@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Crosshair from "@/components/ui/Crosshair";
 import "./globals.css";
 
 const inter = localFont({
@@ -37,7 +38,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${spaceMono.variable} ${jetbrains.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Crosshair
+          color="#4ADEA5"
+          targetEffect="lock"
+          thickness={1}
+          opacity={0.85}
+          smoothing={0.35}
+          showCoordinates
+          targetSelector="a, button, .project-card, [data-crosshair-target]"
+        />
+        {children}
+      </body>
     </html>
   );
 }

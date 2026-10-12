@@ -9,7 +9,7 @@ export function ProjectCard({ project, index }: { project: PublicProject; index:
   const hexIndex = index.toString(16).toUpperCase();
 
   return (
-    <article className={`project-card panel accent-${accent}`}>
+    <article className={`project-card panel accent-${accent}`} data-crosshair-target>
       <ProjectCoverImage src={project.cover_image_url} alt={project.title} />
       <div className="card-meta">
         <span>[ {project.category} ]</span>
